@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+        <link href="css/write.css" rel="stylesheet">
+       <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>write</title>
+</head>
+<body>
+  <div class="container cf">
+    <div class="section">
+      <ul class="videos">
+        <li>
+        </li>
+      </ul>
+    </div>
+    <div class="info cf">
+      <form action="/write" method="post">
+      <input type="hidden" name="Id" value="{{write.Id}}">
+        <div>
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" placeholder="title" value= {{write.title}}>
+        </div>
+        <div>
+          <label for="content">Content</label>
+          <textarea name="content" id="content" cols="30" rows="10"
+            placeholder="remember to be kind">{{write.content}}</textarea>
+        </div>
+        <div class="btn">
+          <button>Post</button>          
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+$(".item").click(function(){
+    $(".item").removeClass("active");
+    $(this).addClass("active");
+    var text = $(this).text().trim();
+    $("#title").attr("placeholder", text)
+ });
+  </script>
+</body>
+ </html>

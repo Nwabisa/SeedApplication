@@ -1,0 +1,32 @@
+<!-- Page Content -->
+
+<a  name="Feeds"></a>
+<div class="banner">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <ul class="list-inline intro-social-buttons">
+                    <li>
+                     <h1>Your Post</h1>
+                     <div id="feeds">
+                        {{#each posts}}
+                        <p>{{title}} {{content}}</p>
+                        {{/each}}
+                    </div>
+                    <td><button><a href="/posts/{{Id}}">Edit</a></button></td>
+                    <td><button><a href="/posts/delete/{{Id}}">Delete</a></button></td>
+
+                </table>
+            </li>
+        </div>
+        <div class="col-lg-6">
+        </div>
+    </div>
+
+</div>
+<!-- /.container -->
+
+</div>
+   <!-- /.banner -->

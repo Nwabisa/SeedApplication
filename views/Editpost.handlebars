@@ -1,0 +1,19 @@
+<h1>Edit issue</h1>
+
+<form class="" action="/posts/update/{{Id}}" method="post">
+    <input type="hidden" name="id" value="{{write.Id}}">
+    <div class="row">
+        <div class="six columns">
+            <label for="Title">Title</label>
+            <input type="text" name="title" value = {{write.Title}}>
+            <label for="Content">Content</label>
+            <textarea name="content" class="u-full-width" id= "desc">{{write.Content}}</textarea>
+        </div>
+        <div class="six columns">
+       <div id="preview">
+        </div>
+        </div>
+    </div>
+    <input class="button-primary" type="submit" value="Submit">
+
+</form>
